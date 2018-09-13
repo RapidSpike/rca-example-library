@@ -19,7 +19,7 @@ $error_count = exec("grep '{$prev_date}' /var/log/apache2/api-dev_error.log.1 | 
 
 $query = array(
     'id' => $id,
-    'count' => $error_count
+    'count' => trim($error_count)
 );
 
 $url = 'https://results.rapidspike.com/rca/';
